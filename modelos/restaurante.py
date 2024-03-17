@@ -2,6 +2,7 @@ from modelos.avaliacao import Avaliacao
 
 class Restaurante:
     """Representa um restaurante e suas características."""
+    
     restaurantes = []
 
     def __init__(self, nome, categoria):
@@ -61,7 +62,7 @@ class Restaurante:
     @property
     def media_avaliacoes(self):
         """Calcula e retorna a média das avaliações do restaurante."""
-        
+
         if not self._avaliacao:
             return '-'
         soma_das_notas = sum(avaliacao._nota for avaliacao in self._avaliacao)
